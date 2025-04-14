@@ -1,4 +1,4 @@
-// Redirect if not logged in
+
 if (localStorage.getItem("isLoggedIn") !== "true" || !localStorage.getItem("loggedInUser")) {
   window.location.href = "login.html";
 }
@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
     wrapper.appendChild(blogCard);
   });
 
-  // Comment submission handler
+  
   wrapper.addEventListener("submit", (e) => {
     if (e.target.classList.contains("comment-form")) {
       e.preventDefault();
@@ -118,7 +118,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Comment edit handler
   wrapper.addEventListener("click", (e) => {
     if (e.target.classList.contains("edit-btn")) {
       const commentDiv = e.target.closest(".comment");
@@ -136,7 +135,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
   });
-  // Comment delete handler
+ 
   wrapper.addEventListener("click", (e) => {
     if (e.target.classList.contains("delete-btn")) {
       const confirmed = confirm("Are you sure you want to delete this comment?");
@@ -152,7 +151,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Logout button functionality
+
   const logoutBtn = document.getElementById("logoutBtn");
   logoutBtn.addEventListener("click", () => {
     localStorage.removeItem("isLoggedIn");

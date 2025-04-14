@@ -1,11 +1,10 @@
 
 
-// Auto-redirect if already logged in
 if (window.location.pathname.includes("login.html") && localStorage.getItem("isLoggedIn") === "true") {
   window.location.href = "dashboard.html";
 }
 
-// Login logic
+
 document.addEventListener("DOMContentLoaded", () => {
   const loginForm = document.getElementById("loginForm");
   if (!loginForm) return;

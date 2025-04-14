@@ -1,4 +1,4 @@
-// Sample user data
+
 const imagePool = ["card_image.jpg", "js_image.jpg", "web_trends.jpg", "workspace.jpg"];
 blogsData = blogsData.map(blog => ({
   ...blog,
@@ -25,7 +25,7 @@ const usersData = [
     }
   ];
   
-  // Sample blog data
+
   const blogsData = [
     {
       id: 1,
@@ -73,7 +73,7 @@ const usersData = [
     }
   ];
   
-//   Optional: Save to localStorage
+
   localStorage.setItem("usersData", JSON.stringify(usersData));
   localStorage.setItem("blogsData", JSON.stringify(blogsData));
   
